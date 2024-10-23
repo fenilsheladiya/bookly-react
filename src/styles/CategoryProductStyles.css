@@ -1,0 +1,90 @@
+/* .category {
+  flex-wrap: wrap;
+  margin-top: 80px !important;
+}
+.category .card {
+  background-color: rgba(128, 128, 128, 0.097);
+  width: 18rem;
+}
+.category .card-name-price {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.category .card-price {
+  color: green;
+  font-weight: bold;
+}
+.category button {
+  border-radius: 0;
+  width: 100%;
+  border-top-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.category .card-text {
+  color: rgb(90, 89, 89);
+}
+
+.category .card img:hover {
+  transform: scale(0.9);
+}
+
+.category .card-img-top {
+  height: 300px !important;
+} */
+
+
+/* arrivals start */
+.arrivals .arrivals-slider .swiper-wrapper{
+  height: 30%;
+}
+.arrivals .arrivals-slider .box{
+  display: flex;
+  height: 230px !important;
+  align-items:center;
+  gap:1rem !important;
+  padding:2rem ;
+  border:var(--border);
+  margin:1rem 1.5rem;
+  /* margin-bottom: 1rem !important; */
+  width: 30%;
+  text-decoration: none !important;
+}
+
+.arrivals .arrivals-slider .box:hover{
+  border:var(--border-hover);
+}
+
+.arrivals .arrivals-slider .box .image img{
+  height:20rem;
+  width: 14rem;
+}
+
+.arrivals .arrivals-slider .box .content h3{
+  font-size: 1.5em;
+  color:var(--black);
+  text-decoration: none !important;
+}
+
+.arrivals .arrivals-slider .box .content .price{
+  font-size: 2rem;
+  color:var(--black);
+  padding-bottom: .5rem;
+}
+
+.arrivals .arrivals-slider .box .content .price span{
+  font-size: 1.5rem;
+  color:var(--light-color);
+  text-decoration: line-through;
+}
+
+.arrivals .arrivals-slider .box .content .stars i{
+  font-size: 1.5rem;
+  color:var(--green);
+}
+
+/* arrivals end */

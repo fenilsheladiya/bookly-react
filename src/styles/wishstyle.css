@@ -1,0 +1,80 @@
+
+
+.btn{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.9rem 3rem;
+    border-radius: .5rem;
+    color:#fff;
+    background:var(--green);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .btnn{
+    margin-top: 1rem;
+    display:inline-block;
+    padding:.9rem 3rem;
+    border-radius: .5rem;
+    color:#fff;
+    background:rgb(150, 73, 73);
+    font-size: 1rem;
+    cursor: pointer;
+    font-weight: 500;
+  }
+  
+  .btn:hover{
+    background:var(--dark-color) !important;
+  }
+/* arrivals start */
+.arrivals .arrivals-slider .swiper-wrapper{
+    height: 30%;
+  }
+  .arrivals .arrivals-slider .box{
+    display: flex;
+    height: 230px !important;
+    align-items:center;
+    gap:1rem !important;
+    padding:2rem ;
+    border:var(--border);
+    margin:1rem 1.5rem;
+    /* margin-bottom: 1rem !important; */
+    width: 30%;
+    text-decoration: none !important;
+  }
+  
+  .arrivals .arrivals-slider .box:hover{
+    border:var(--border-hover);
+  }
+  
+  .arrivals .arrivals-slider .box .image img{
+    height:20rem;
+    width: 14rem;
+  }
+  
+  .arrivals .arrivals-slider .box .content h3{
+    font-size: 1.5em;
+    color:var(--black);
+    text-decoration: none !important;
+  }
+  
+  .arrivals .arrivals-slider .box .content .price{
+    font-size: 2rem;
+    color:var(--black);
+    padding-bottom: .5rem;
+  }
+  
+  .arrivals .arrivals-slider .box .content .price span{
+    font-size: 1.5rem;
+    color:var(--light-color);
+    text-decoration: line-through;
+  }
+  
+  .arrivals .arrivals-slider .box .content .stars i{
+    font-size: 1.5rem;
+    color:var(--green);
+  }
+  
+  /* arrivals end */
+  
