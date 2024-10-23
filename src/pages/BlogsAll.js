@@ -14,7 +14,7 @@ const BlogsAll = () => {
   //get blog
   const getAllBlog = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/product/get-blog`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/get-blog`);
       if (data?.success) {
         setBlogs(data?.blogs);
       }
@@ -54,7 +54,7 @@ const BlogsAll = () => {
                   >
                     <div className="image" key={p._id}>
                       <img
-                        src={`/api/v1/product/blog-photo/${p._id}`}
+                        src={`${process.env.REACT_APP_API_URL}/api/v1/product/blog-photo/${p._id}`}
                         className="card-img-top"
                         alt={p.title}
                       />

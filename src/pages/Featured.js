@@ -27,7 +27,8 @@ const Featured = () => {
     //get all cat
     const getAllCategory = async () => {
       try {
-        const { data } = await axios.get("/api/v1/category/get-category");
+        // eslint-disable-next-line no-template-curly-in-string
+        const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/category/get-category");
         if (data?.success) {
           setCategories(data?.category);
         }
@@ -43,7 +44,7 @@ const Featured = () => {
     const getAllProducts = async () => {
       try {
         setLoading(true);
-        const { data } = await axios.get(`/api/v1/product/get-product`);
+        const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/get-product`);
         setLoading(false);
         setProducts(data?.products);
       } catch (error) {
@@ -75,7 +76,8 @@ const Featured = () => {
     //get filterd product
     const filterProduct = async () => {
       try {
-        const { data } = await axios.post("/api/v1/product/product-filters", {
+        // eslint-disable-next-line no-template-curly-in-string
+        const { data } = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/product/product-filters", {
           checked,
           radio,
         });
@@ -138,7 +140,7 @@ const Featured = () => {
                   >
                     <div className="image" key={p._id}>
                       <img
-                        src={`/api/v1/product/product-photo/${p._id}`}
+                        src={`${process.env.REACT_APP_API_URL}/api/v1/product/product-photo/${p._id}`}
                         className="card-img-top"
                         alt={p.name}
                       />

@@ -15,7 +15,7 @@ const AdminBlogs = () => {
   //get blog
   const getAllBlog = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/product/get-blog`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/get-blog`);
       if (data?.success) {
         setBlogs(data?.blogs);
       }
@@ -33,7 +33,7 @@ const AdminBlogs = () => {
     try {
       let answer = window.confirm("Are You Sure want to delete this blog ? ");
       if (!answer) return;
-      const { data } = await axios.delete(`/api/v1/product/delete-blog/${blogId}`);
+      const { data } = await axios.delete(`${process.env.REACT_APP_API_URL}/api/v1/product/delete-blog/${blogId}`);
       toast.success("Product DEleted Succfully");
       setBlogs(blogs.filter(blog => blog._id !== blogId));
       navigate("/dashboard/admin/blogs");

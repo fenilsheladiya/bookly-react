@@ -13,7 +13,8 @@ function Users() {
 
   const getuser = async () => {
     try {
-      const { data } = await axios.get("/api/v1/auth/all-user");
+      // eslint-disable-next-line no-template-curly-in-string
+      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/all-user");
       setUser(data?.user);
     } catch (error) {
       console.log(error);
@@ -28,7 +29,8 @@ function Users() {
   //all subscriber
   const getsubsciber = async () => {
     try {
-      const { data } = await axios.get("/api/v1/auth/all-subscriber");
+      // eslint-disable-next-line no-template-curly-in-string
+      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/all-subscriber");
       setSubscriber(data?.subscribe);
     } catch (error) {
       console.log(error);

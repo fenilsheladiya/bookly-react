@@ -20,7 +20,7 @@ const Blogs = () => {
   //get blog
   const getAllBlog = async () => {
     try {
-      const { data } = await axios.get(`/api/v1/product/get-blog`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/get-blog`);
       if (data?.success) {
         setBlogs(data?.blogs);
       }
@@ -78,7 +78,7 @@ const Blogs = () => {
                 <SwiperSlide>
                   <div className="swiper-slide box">
                     <div className="image">
-                      <img  src={`/api/v1/product/blog-photo/${p._id}`} alt="" />
+                      <img  src={`${process.env.REACT_APP_API_URL}/api/v1/product/blog-photo/${p._id}`} alt="" />
                     </div>
                     <div className="content">
                     <h3> {p.title.substring(0, 15)}...</h3> 

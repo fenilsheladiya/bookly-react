@@ -28,7 +28,7 @@ const BlogDetails = () => {
   const getProduct = async () => {
     try {
       const { data } = await axios.get(
-        `/api/v1/product/get-blog/${params.slug}`
+        `${process.env.REACT_APP_API_URL}/api/v1/product/get-blog/${params.slug}`
       );
       setBlogs(data?.blog);
     } catch (error) {
@@ -40,7 +40,7 @@ const BlogDetails = () => {
   const getAllBlog = async () => {
     try {
       setLoading(true);
-      const { data } = await axios.get(`/api/v1/product/get-blog`);
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/get-blog`);
       if (data?.success) {
         setLoading(false);
         setRelatedBlogs(data?.blogs);
@@ -61,7 +61,7 @@ const BlogDetails = () => {
       <div className="row container product-details">
         <div className="col-md-6">
           <img
-            src={`/api/v1/product/blog-photo/${Blogs?._id}`}
+            src={`${process.env.REACT_APP_API_URL}/api/v1/product/blog-photo/${Blogs?._id}`}
             className="card-img-top object-fit-contain border border-0"
             alt={Blogs.title}
             height="400"
@@ -104,7 +104,7 @@ const BlogDetails = () => {
                   <div className="swiper-slide box">
                     <div className="image" key={p._id}>
                       <img
-                        src={`/api/v1/product/blog-photo/${p?._id}`}
+                        src={`${process.env.REACT_APP_API_URL}/api/v1/product/blog-photo/${p?._id}`}
                         className="card-img-top"
                         alt={p.title}
                       />

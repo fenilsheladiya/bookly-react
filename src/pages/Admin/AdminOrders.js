@@ -21,7 +21,8 @@ const AdminOrders = () => {
   const [auth, setAuth] = useAuth();
   const getOrders = async () => {
     try {
-      const { data } = await axios.get("/api/v1/auth/all-orders");
+      // eslint-disable-next-line no-template-curly-in-string
+      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/all-orders");
       setOrders(data);
     } catch (error) {
       console.log(error);

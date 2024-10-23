@@ -11,7 +11,8 @@ const Products = () => {
   //getall products
   const getAllProducts = async () => {
     try {
-      const { data } = await axios.get("/api/v1/product/get-product");
+      // eslint-disable-next-line no-template-curly-in-string
+      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/product/get-product");
       setProducts(data.products);
     } catch (error) {
       console.log(error);

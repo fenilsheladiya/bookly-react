@@ -17,7 +17,8 @@ const ForgotPasswordOtp = () => {
     const handleSubmit = async (e) => {
       e.preventDefault();
       try {
-        const res = await axios.post("/api/v1/auth/forgot-password-otp", {
+        // eslint-disable-next-line no-template-curly-in-string
+        const res = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/auth/forgot-password-otp", {
           otpp
         });
         if (res && res.data.success == true) {

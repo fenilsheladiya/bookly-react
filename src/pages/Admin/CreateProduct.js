@@ -24,7 +24,8 @@ const CreateProduct = () => {
 
   const getAllCategory = async () => {
     try {
-      const { data } = await axios.get("/api/v1/category/get-category");
+      // eslint-disable-next-line no-template-curly-in-string
+      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/category/get-category");
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -52,7 +53,8 @@ const CreateProduct = () => {
         productData.append("photo", photo);
         productData.append("category", category);
          
-    const { data } = await axios.post("/api/v1/product/create-product", productData);
+    // eslint-disable-next-line no-template-curly-in-string
+    const { data } = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/product/create-product", productData);
     if (data?.success) {
       
       navigate("/dashboard/admin/products");

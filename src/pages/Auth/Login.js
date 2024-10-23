@@ -19,7 +19,8 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/v1/auth/login", {
+      // eslint-disable-next-line no-template-curly-in-string
+      const res = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/auth/login", {
         email,
         password,
       });
@@ -84,7 +85,7 @@ const Login = () => {
           </NavLink>
         </p>
         <p>
-          Alerady have account ?{" "}
+          don't a have account ?{" "}
           <NavLink to="/register" href="#">
             click here
           </NavLink>

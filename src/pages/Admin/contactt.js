@@ -12,7 +12,8 @@ const Contact = () => { // Change 'contact' to 'Contact'
 
   const getUser = async () => { // Changed to camelCase convention
     try {
-      const { data } = await axios.get("/api/v1/auth/all-contact");
+      // eslint-disable-next-line no-template-curly-in-string
+      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/all-contact");
       setUser(data?.contact);
     } catch (error) {
       console.log(error);
