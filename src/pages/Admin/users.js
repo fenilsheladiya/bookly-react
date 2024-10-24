@@ -14,7 +14,7 @@ function Users() {
   const getuser = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/all-user");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/auth/all-user`);
       setUser(data?.user);
     } catch (error) {
       console.log(error);
@@ -30,7 +30,7 @@ function Users() {
   const getsubsciber = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/all-subscriber");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/auth/all-subscriber`);
       setSubscriber(data?.subscribe);
     } catch (error) {
       console.log(error);

@@ -28,7 +28,7 @@ const Profile = () => {
     e.preventDefault();
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.put("${process.env.REACT_APP_API_URL}/api/v1/auth/profile", {
+      const { data } = await axios.put(`${process.env.REACT_APP_API_URL}/api/v1/auth/profile`, {
         name,
         email,
         password,

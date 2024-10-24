@@ -20,7 +20,7 @@ const Login = () => {
     e.preventDefault();
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const res = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/auth/login", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/auth/login`, {
         email,
         password,
       });

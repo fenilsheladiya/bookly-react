@@ -26,7 +26,7 @@ const HomePage = () => {
   const getAllCategory = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/category/get-category");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/category/get-category`);
       if (data?.success) {
         setCategories(data?.category);
       }
@@ -56,7 +56,7 @@ const HomePage = () => {
   const getTotal = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/product/product-count");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/product-count`);
       setTotal(data?.total);
     } catch (error) {
       console.log(error);
@@ -102,7 +102,7 @@ const HomePage = () => {
   const filterProduct = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/product/product-filters", {
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/product/product-filters`, {
         checked,
         radio,
       });

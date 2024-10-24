@@ -18,7 +18,7 @@ const CreateCategory = () => {
     e.preventDefault();
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/category/create-category", {
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/category/create-category`, {
         name,
       });
       if (data?.success) {
@@ -44,7 +44,7 @@ const CreateCategory = () => {
   const getAllCategory = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/category/get-category");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/category/get-category`);
       if (data?.success) {
         setCategories(data?.category);
       }

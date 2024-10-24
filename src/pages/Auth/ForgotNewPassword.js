@@ -17,7 +17,7 @@ const ForgotNewPassword = () => {
       e.preventDefault();
       try {
         // eslint-disable-next-line no-template-curly-in-string
-        const res = await axios.put("${process.env.REACT_APP_API_URL}/api/v1/auth/forgot-password-newpassword", {
+        const res = await axios.put(`${process.env.REACT_APP_API_URL}/api/v1/auth/forgot-password-newpassword`, {
           Password,
           CPassword
         });

@@ -21,7 +21,7 @@ const Register = () => {
     e.preventDefault();
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const res = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/auth/register", {
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/auth/register`, {
         name,
         email,
         password,

@@ -11,7 +11,7 @@ const Orders = () => {
   const getOrders = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/auth/orders");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/auth/orders`);
       setOrders(data);
     } catch (error) {
       console.log(error);

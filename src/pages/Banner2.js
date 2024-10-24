@@ -10,7 +10,7 @@ const Banner2 = () => {
     e.preventDefault();
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const res = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/auth/subscriber", { 
+      const res = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/auth/subscriber`, { 
         email,
       });
       if (res && res.data.success) {

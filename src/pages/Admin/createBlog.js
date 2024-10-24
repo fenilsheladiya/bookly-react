@@ -22,7 +22,7 @@ const CreateBlogs = () => {
       blogData.append("description", description);
       blogData.append("photo", photo);
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/product/create-blog", blogData);
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/product/create-blog`, blogData);
       if (data?.success) {
         toast.success("Blog Created Successfully");
         navigate("/dashboard/admin");

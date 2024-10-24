@@ -49,7 +49,7 @@ const CartPage = () => {
   const getToken = async () => {
     try {
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.get("${process.env.REACT_APP_API_URL}/api/v1/product/braintree/token");
+      const { data } = await axios.get(`${process.env.REACT_APP_API_URL}/api/v1/product/braintree/token`);
       setClientToken(data?.clientToken);
     } catch (error) {
       console.log(error);
@@ -65,7 +65,7 @@ const CartPage = () => {
       setLoading(true);
       const { nonce } = await instance.requestPaymentMethod();
       // eslint-disable-next-line no-template-curly-in-string
-      const { data } = await axios.post("${process.env.REACT_APP_API_URL}/api/v1/product/braintree/payment", {
+      const { data } = await axios.post(`${process.env.REACT_APP_API_URL}/api/v1/product/braintree/payment`, {
         nonce,
         cart,
       });
